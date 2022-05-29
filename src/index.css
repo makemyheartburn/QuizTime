@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "Gobold";
+  src: url("./gobold.ttf");
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -30,5 +34,78 @@ h2 {
   background-color: white;
   width: 300px;
   margin: auto;
-  padding: 25px;
+  padding: 50px;
+  transform: skewX(-11deg);
+  z-index: 1;
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
+}
+.answers > * {
+  -webkit-transform: skewX(11deg);
+  -moz-transform: skewX(11deg);
+  -ms-transform: skewX(11deg);
+  -o-transform: skewX(11deg);
+  transform: skewX(11deg);
+}
+.relative {
+  position: relative;
+}
+.test {
+  padding: 10px;
+}
+
+.test:hover {
+  border: 1px solid black;
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(-100%, 0);
+    transform: translate(-100%, 0);
+  }
+}
+
+@-moz-keyframes scroll {
+  0% {
+    -moz-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  100% {
+    -moz-transform: translate(-100%, 0);
+    transform: translate(-100%, 0);
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
+
+.marquee {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 0;
+  display: block;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.marquee span {
+  display: inline-block;
+  padding-left: 100%;
+  -webkit-animation: scroll 5s infinite linear;
+  -moz-animation: scroll 5s infinite linear;
+  animation: scroll 5s infinite linear;
+  font-size: 100px;
+  font-family: "Gobold";
+  color: #d3e775;
 }

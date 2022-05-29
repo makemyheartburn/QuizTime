@@ -2,7 +2,7 @@ import "./answer.css";
 const Answer = ({ answer, onSelected, selectedAnswer }) => {
   return (
     <div
-      className={selectedAnswer === answer.id ? "selected" : ""}
+      className={`${selectedAnswer === answer.id ? "selected" : ""} test`}
       onClick={() => onSelected(answer.id)}
     >
       <span className="answer-number ">{answer.id}.</span>
