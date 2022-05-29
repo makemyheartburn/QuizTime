@@ -1,0 +1,7 @@
+.answer-number {
+  background-color: pink;
+  margin-right: 5px;
+}
+.selected {
+  background-color: lightpink;
+}
